@@ -6,8 +6,10 @@
     </head>
     <body>
         <ul>
-            <li>ISBN: {{$book->isbn}}</li>
+            <li>ISBN10: {{$book->isbn10}}</li>
+            <li>ISBN13: {{$book->isbn13}}</li>
             <li>Name: {{$book->name}}</li>
+            <li>Author: {{$book->author}}</li>
             <li>Description: {{$book->description}}</li>
         </ul>
     </body>

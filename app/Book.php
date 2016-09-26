@@ -4,5 +4,5 @@ use Illuminate\Database\Eloquent\Model;
 class Book extends Model
 {
     protected $table = "books";
-    protected $fillable = ['isbn', 'name', 'description'];
+    protected $fillable = ['isbn10', 'isbn13', 'name', 'athor', 'description'];
 }

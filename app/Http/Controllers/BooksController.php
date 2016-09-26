@@ -10,7 +10,12 @@ class BooksController extends Controller
         return view('books.index', compact('books'));
     }
     public function show($isbn) {
-        $book = Book::where('isbn', $isbn)->first();
+        $length = strlen($isbn);
+        if($length == 10) {
+            $book = Book::where('isbn10', $isbn)->first();
+        } else if($length == 13) {
+            $book = Book::where('isbn13', $isbn)->first();
+        }
         return view('books.show', compact('book'));
     }
 }

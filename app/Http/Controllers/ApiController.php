@@ -21,8 +21,10 @@ class ApiController extends Controller
     public function create(Request $request) {
         $data = $request->all();
         $book = new Book;
-        $book->isbn = $data['isbn'];
+        $book->isbn10 = $data['isbn10'];
+        $book->isbn13 = $data['isbn13'];
         $book->name = $data['name'];
+        $book->author = $data['author'];
         $book->description = $data['description'];
         $book->save();
         return response()->json([
@@ -32,8 +34,10 @@ class ApiController extends Controller
     public function edit(Request $request) {
         $data = $request->all();
         $book = Book::where('id', $data['id'])->first();
-        $book->isbn = $data['isbn'];
+        $book->isbn10 = $data['isbn10'];
+        $book->isbn13 = $data['isbn13'];
         $book->name = $data['name'];
+        $book->author = $data['author'];
         $book->description = $data['description'];
         $book->save();
         return response()->json([

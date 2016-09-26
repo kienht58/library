@@ -17,6 +17,9 @@
                     Name
                 </th>
                 <th>
+                    Author
+                </th>
+                <th>
                     Description
                 </th>
             </tr>
@@ -30,6 +33,9 @@
                     </td>
                     <td>
                         {{$book->name}}
+                    </td>
+                    <td>
+                        {{$book->author}}
                     </td>
                     <td>
                         {{$book->description}}
